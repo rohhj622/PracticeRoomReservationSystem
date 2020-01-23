@@ -30,15 +30,15 @@
 ### /WebContent/page
 
 - 사용자
-+ user01 : 사용자 예약
-+ user02 : 사용자 내역
-+ board : 공지사항
+ + user01 : 사용자 예약
+ + user02 : 사용자 내역
+ + board : 공지사항
 
 - 관리자
-+ admin00 : 관리자 예약
-+ admin01 : 관리자 내역
-+ admin02 : 관리자 통계
-+ board : 공지사항
+ + admin00 : 관리자 예약
+ + admin01 : 관리자 내역
+ + admin02 : 관리자 통계
+ + board : 공지사항
 
 - 선생님
  + teacher01 : 선생님 예약
