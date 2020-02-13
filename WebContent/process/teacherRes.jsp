@@ -125,7 +125,7 @@
 						<input type="hidden" name="mem_id2" value="<%=mem_id2%>">
 						<input type="hidden" name="teacherI" value="<%=instrument%>">
 						
-						<input type="submit" value="<%=text%>"><br>
+						<input class="btn-default btn-xs btn-block" type="submit" value="<%=text%>"><br>
 					</form>
 					
 	<% 
@@ -171,7 +171,7 @@
 						<input type="hidden" name="mem_id2" value="<%=mem_id2%>">
 						<input type="hidden" name="teacherI" value="<%=instrument%>">
 						
-						<input type="submit" value="<%=text%>"><br>
+						<input class="btn-default btn-xs btn-block" type="submit" value="<%=text%>"><br>
 					</form>
 					
 	<% 
@@ -217,7 +217,7 @@
 						<input type="hidden" name="mem_id2" value="<%=mem_id2%>">
 						<input type="hidden" name="teacherI" value="<%=instrument%>">
 						
-						<input type="submit" value="<%=text%>"><br>
+						<input class="btn-default btn-xs btn-block" type="submit" value="<%=text%>"><br>
 					</form>
 					
 	<% 

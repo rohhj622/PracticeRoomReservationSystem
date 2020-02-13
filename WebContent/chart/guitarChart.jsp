@@ -4,11 +4,20 @@
 <html>
 <head>
 <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">	
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">	
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>  
+   
 <title>SkyMusic - timeChart(Guitar)</title>
 </head>
 <body>
-<center>
-	<table border="1" class="tb">
+<div class="container">
+	<table class="table">
 		<tr>
 			<td>
 				<jsp:include page="../header/adminMenu.jsp"/>
@@ -23,10 +32,15 @@
 				<button onclick="location.href='drumChart.jsp'">드럼</button>
 				<button onclick="location.href='guitarChart.jsp'">기타&베이스</button>
 				<button onclick="location.href='pianoChart.jsp'">피아노</button>
-				<jsp:include page="chart04.jsp"></jsp:include>
+				
 			</td>  
 		</tr>
+		<tr>
+			<td>
+				<jsp:include page="chart04.jsp"></jsp:include>
+			</td>
+		</tr>
 	</table>
-</center>
+</div>
 </body>
 </html>

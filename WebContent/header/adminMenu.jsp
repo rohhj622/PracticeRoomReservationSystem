@@ -5,39 +5,53 @@
 <head>
 <meta charset="UTF-8">
 <title>SkyMusic - menu</title>
+    
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">	
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">	
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>  
 
 </head>
 <body>
-
-<p id="sub">SkyMusic</p>
 <%
-	String mem_id= request.getParameter("mem_id");
+		String mem_id= request.getParameter("mem_id");
 %>
+<div class="container">
 
-<table>
-	<tr>
-		<td>
+	<div class="row">
+		<div class="col-xs-4">
+			<p id="sub">SkyMusic</p>
+		</div>	
+	</div>
+	<div class="row">
+		<div class="col-xs-2 ">
 			<form action="../page/admin00.jsp" method="post">
-				<input id="ipM" type="submit" value="예약" >
-			</form>	
-		</td>
-		<td>
+					<input class="btn btn-default btn-md" type="submit" value="예약" >
+				</form>
+		</div>
+		<div class="col-xs-2">
 			<form action="../page/admin01.jsp" method="post">
-				<input id="ipM" type="submit" value="내역" >
-			</form>	
-		</td>
-		<td>
+					<input class="btn btn-default btn-md " type="submit" value="내역" >
+				</form>	
+		</div>
+		<div class="col-xs-2">
 			<form action="../page/admin02.jsp" method="post">
-				<input id="ipM" type="submit" value="예약통계" >
-			</form>	
-		</td>
-		<td>
+					<input class="btn btn-default btn-md" type="submit" value="통계" >
+				</form>
+		</div>
+		<div class="col-xs-2">
 			<form action="../page/board.jsp" method="post">
-				<input id="ipM" type="submit" value="공지사항" >
-			</form>	
-		</td>
-	</tr>
-</table>
-
+					<input class="btn btn-default btn-md" type="submit" value="공지" >
+				</form>
+		</div>
+		<div class=" col-xs-2 ">
+			<form action="../process/loginOut.jsp" method="post">
+				<input class="btn btn-default btn-md " type="submit" value="logout" >
+			</form>
+		</div>	
+	</div>
+</div>
 </body>
 </html>

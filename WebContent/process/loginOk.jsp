@@ -33,12 +33,13 @@
 	ResultSet rs = null;
 	
 	/* sql query */
-	try{
+	try{		
+		
 	
 		/* 현재 페널티 걸린 사람들 정보 가져오기.  */
 		String sql  = "select * from SkyMusic.member where mem_pDate is not null";
 		pstmt = conn.prepareStatement(sql);
-		rs = pstmt.executeQuery();
+		rs = pstmt.executeQuery(sql);
 		
 		while(rs.next()){
 			String str = rs.getString("mem_pDate");
@@ -60,7 +61,7 @@
 			
 		}
 		
-		String sql1 = "select mem_id,mem_pw from SkyMusic.member where mem_id='"+mem_id+"'";
+		String sql1 = "select mem_type,mem_id,mem_pw from SkyMusic.member where mem_id='"+mem_id+"'";
 		pstmt = conn.prepareStatement(sql1);
 		rs = pstmt.executeQuery(sql1);
 		
@@ -69,14 +70,14 @@
 			/* 아이디 비번 같냐?  */
 			if(mem_id.equals(rs.getString("mem_id"))&& mem_pw.equals(rs.getString("mem_pw"))){
 				/* 비번도 아이디도 다 맞으면 로그인  */
-				if(mem_id.equals("admin")){
+				if(rs.getString("mem_type").equals("관리자")){
 					session.setAttribute("mem_id", mem_id);
 					%>
 						<script type="text/javascript">
 							location.href="../page/admin01.jsp";
 						</script>
 					<%
-				}else if(mem_id.equals("teacher")||mem_id.equals("box")||mem_id.equals("tea1")){
+				}else if(rs.getString("mem_type").equals("선생님")){
 					session.setAttribute("mem_id", mem_id);
 					%>
 						<script type="text/javascript">

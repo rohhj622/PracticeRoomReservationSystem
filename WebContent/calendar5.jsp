@@ -51,8 +51,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+    
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">	
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">	
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>  
+ <meta charset="UTF-8">
 <title>SkyMusic - Calendar</title>
 <style type="text/css">
 	a { text-decoration: none; }
@@ -95,7 +102,7 @@
 		<option value="guitar" <c:if test="${instrument eq 'guitar'}"> selected</c:if>>기타</option>
 	</select> --%>
 	<!-- Calendar -->
-	<table class="tb1" border="1" >
+	<table class="table" border="1" >
 	<tr>
 	    <td>
 		    <a href="./teacher01.jsp?y=<%=prevYear%>&m=<%=prevMonth%>">◁</a> 
@@ -105,7 +112,7 @@
 	</tr>
 	<tr>
 	    <td>
-	        <table class="tb2">
+	        <table class="table">
 	        <tr>
 	            <td>일</td>
 	            <td>월</td>

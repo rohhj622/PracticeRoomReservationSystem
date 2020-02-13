@@ -5,10 +5,20 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+    
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">	
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">	
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>  
+
 <title>SkyMusic</title>
 </head>
 <body>
+<div class="container">
+
 	<%
 		String mem_id = session.getAttribute("mem_id").toString(); /* 아이디 . 관리자인지 아닌지에 따라 버튼 보여주고 말고, */
 		String no = request.getParameter("no"); // 글 번호 
@@ -54,7 +64,7 @@
 			
 			if(content.isEmpty()==false){ //content가 빈게 아니라면
 				%>
-				<table style="border:1px solid gray;">
+				<table style="border:1px solid gray;" class="table">
 					<!-- 제목 & 작성 -->
 					<tr style="text-align:center;" >
 						<td>
@@ -94,6 +104,6 @@
 		
 	%>
 	
-	
+</div>	
 </body>
 </html>

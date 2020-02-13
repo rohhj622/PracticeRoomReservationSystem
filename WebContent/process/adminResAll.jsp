@@ -85,71 +85,74 @@
 	
 
 %>
-	<p ><%=year %>년 <%=month %>월 <%=day %>일</p>
-
-	<form action="../process/taskResAll.jsp" method="post" onSubmit="return chk()">
-		<select name="placeNo">
-			<option value="1">1호점</option>
-			<option value="2">2호점</option>
-		</select>
-		<select name="instrumentT">
-		<%
-			if(instrument.equals("drum")){
-				%>
-					<option value="Drum">드럼</option>
-				<% 	
-			}else if(instrument.equals("guitar&bass")){
-				%>
-					<option value="Guitar&Bass">기타/베이스</option>
-				<% 	
-			}else if(instrument.equals("piano&vocal")){
-				%>
-					<option value="Piano&Vocal">피아노/보컬</option>
-				<% 
-			}else{
-				%>
-					<option value="Drum">드럼</option>
-					<option value="Guitar&Bass">기타/베이스</option>
-					<option value="Piano&Vocal">피아노/보컬</option>
-				<% 
-			}
-		%>
-			
-		</select>
-		<select name="startT">
-			<option value="9">9시</option>
-			<option value="10">10시</option>
-			<option value="11">11시</option>
-			<option value="12">12시</option>
-			<option value="13">13시</option>
-			<option value="14">14시</option>
-			<option value="15">15시</option>
-			<option value="16">16시</option>
-			<option value="17">17시</option>
-			<option value="18">18시</option>
-			<option value="19">19시</option>
-			<option value="20">20시</option>
-			<option value="21">21시</option>
-		</select>
-		~
-		<select name="endT">
-			<option value="10">10시</option>
-			<option value="11">11시</option>
-			<option value="12">12시</option>
-			<option value="13">13시</option>
-			<option value="14">14시</option>
-			<option value="15">15시</option>
-			<option value="16">16시</option>
-			<option value="17">17시</option>
-			<option value="18">18시</option>
-			<option value="19">19시</option>
-			<option value="20">20시</option>
-			<option value="21">21시</option>
-			<option value="22">22시</option>
-		</select>
-		<input type="hidden" name="date" value="<%=date %>">
 	
-		<input type="submit" value="예약하기">
-	</form>
+	<div class="container">
+		<div class="row">
+			<p ><%=year %>년 <%=month %>월 <%=day %>일</p>
+		</div>
+		<div class="row">
+			<form action="../process/taskResAll.jsp" method="post" onSubmit="return chk()">
+				<select name="instrumentT" class="selectpicker">
+				<%
+					if(instrument.equals("drum")){
+						%>
+							<option value="Drum">드럼</option>
+						<% 	
+					}else if(instrument.equals("guitar&bass")){
+						%>
+							<option value="Guitar&Bass">기타/베이스</option>
+						<% 	
+					}else if(instrument.equals("piano&vocal")){
+						%>
+							<option value="Piano&Vocal">피아노/보컬</option>
+						<% 
+					}else{
+						%>
+							<option value="Drum">드럼</option>
+							<option value="Guitar&Bass">기타/베이스</option>
+							<option value="Piano&Vocal">피아노/보컬</option>
+						<% 
+					}
+				%>
+					
+				</select>
+				<select name="startT" class="selectpicker">
+					<option value="9">9시</option>
+					<option value="10">10시</option>
+					<option value="11">11시</option>
+					<option value="12">12시</option>
+					<option value="13">13시</option>
+					<option value="14">14시</option>
+					<option value="15">15시</option>
+					<option value="16">16시</option>
+					<option value="17">17시</option>
+					<option value="18">18시</option>
+					<option value="19">19시</option>
+					<option value="20">20시</option>
+					<option value="21">21시</option>
+				</select>
+				~
+				<select name="endT" class="selectpicker">
+					<option value="10">10시</option>
+					<option value="11">11시</option>
+					<option value="12">12시</option>
+					<option value="13">13시</option>
+					<option value="14">14시</option>
+					<option value="15">15시</option>
+					<option value="16">16시</option>
+					<option value="17">17시</option>
+					<option value="18">18시</option>
+					<option value="19">19시</option>
+					<option value="20">20시</option>
+					<option value="21">21시</option>
+					<option value="22">22시</option>
+				</select>
+				<input type="hidden" name="placeNo" value="2">
+				<input type="hidden" name="date" value="<%=date %>">
+				<br><br>
+				<input  class="btn-default btn-xs btn-block" type="submit" value="예약하기">
+			</form>
+		</div>
+	</div>
 </body>
 </html>

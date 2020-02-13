@@ -5,11 +5,18 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">	
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">	
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>  
+
 <title>SkyMusic - Chart</title>
 </head>
 <body>
-<center>
-	<table border="1" class="tb">
+<div class="container">
+	<table class="table">
 		<tr>
 			<td>
 				<jsp:include page="../header/adminMenu.jsp"/>
@@ -23,6 +30,8 @@
 			</td>
 		</tr>
 	</table>
-</center>
+</div>
+	
+
 </body>
 </html>

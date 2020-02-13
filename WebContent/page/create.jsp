@@ -5,11 +5,19 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+    
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">	
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">	
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>  
+
 <title>SkyMusic - Create</title>
 </head>
 <body>
-	<center>
+<div class="container">
 	<h1>공지사항 작성</h1>
 	<%
 		String noUpdate = request.getParameter("number"); //details에서 수정 누른 사람들. 
@@ -49,7 +57,7 @@
 					if(title != null && content != null){
 						%>
 						<form action="boardTask.jsp">
-							<table>
+							<table class="table">
 								<tr>
 									<td>
 										제목 : <input type="text" name="title" value="<%=title %>">
@@ -79,7 +87,7 @@
 			else{
 				%>
 				<form action="boardTask.jsp">
-							<table>
+							<table class="table">
 								<tr>
 									<td>
 										제목 : <input type="text" name="title" >
@@ -98,7 +106,7 @@
 				}
 
 			%>
-	</center>
+</div>
 		
 </body>
 </html>

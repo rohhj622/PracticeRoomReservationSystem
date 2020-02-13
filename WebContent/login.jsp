@@ -5,13 +5,25 @@
 <head>
 <meta charset="UTF-8">
 <title>SkyMusic</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+    
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">	
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">	
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>  
+ 
 <style type="text/css">
 	@import url('https://fonts.googleapis.com/css?family=Mansalva|Ranga|Shadows+Into+Light&display=swap');
-    
+    #head{
+    	margin-top:10em;
+    }
     p{
         color:#000080;
         font-weight: 700; 
-        font-size: 10em;
+        font-size: 5em;
         text-align: center;
         font-family: 'Shadows Into Light', cursive;
     }
@@ -19,6 +31,15 @@
         margin:auto; 
         text-align: center;
     }
+    a { text-decoration: none; }
+	a:link { color: Blue; }
+	a:visited { color: blue; }
+	a:hover { color: black; }
+	a:active { color: red; }
+	.tb2-td{
+		/* background-color: #cce0ff; */
+		color: gray; 
+	}
     
     #id01{
 /*     	//df
@@ -72,13 +93,30 @@
 
 
 <body>
-<p>"Sky Music" </p>
-<center>
-	<form action="./process/loginOk.jsp" method="post">
-		id : <input type="text" name="mem_id" id="id01"  ><br>
-		pw :<input type="password" name="mem_pw" id="id01"><br>
-		<input type="submit" value="login" id="id02">
-	</form>
-</center>
+
+
+<div class="container-fluid">
+	<div class="row" id="head">
+		<div class="col-sm-12">
+			<p>"Sky Music" </p>
+			실용음악학원
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-sm-12">
+			<form action="./process/loginOk.jsp" method="post">
+				id : <input type="text" name="mem_id" id="id01"  ><br>
+				pw :<input type="password" name="mem_pw" id="id01"><br>
+				<input type="submit" value="login" id="id02">
+			</form>	
+		</div>
+	</div>
+	
+	<div class="row">
+		<div class="col-sm-12">
+			<a href="./page/regist.jsp">회원가입</a>
+		</div>
+	</div>
+</div>
 </body>
 </html>

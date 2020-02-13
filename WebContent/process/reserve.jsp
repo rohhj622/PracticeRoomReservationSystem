@@ -122,7 +122,7 @@
 				acdCnt=2;
 				break;
 			case "guitar&bass":
-				acdCnt=1;
+				acdCnt=2;
 				break;
 			case "piano&vocal":
 				acdCnt=3;
@@ -161,7 +161,7 @@
 				<input type="hidden" name="text" value="<%=text %>">
 				<input type="hidden" name="placeNo" value="<%=placeNo %>">
 				<%--  --%>
-				<input type="submit" value="<%=sText %>"><br>
+				<input class="btn-default btn-xs btn-block" type="submit" value="<%=sText %>"><br>
 			</form>
 			
 <% 			

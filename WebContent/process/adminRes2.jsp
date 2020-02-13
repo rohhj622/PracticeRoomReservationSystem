@@ -94,7 +94,7 @@
 					<input type="hidden" name="acd_startTime" value="<%=acd_startTime %>">
 					<input type="hidden" name="mem_id2" value="<%=mem_id2%>">
 					
-					<input type="submit" value="<%=text%>"><br>
+					<input class="btn-default btn-xs btn-block" type="submit" value="<%=text%>"><br>
 				</form>
 				
 <% 
@@ -133,7 +133,7 @@
 					<input type="hidden" name="acd_startTime" value="<%=acd_startTime %>">
 					<input type="hidden" name="mem_id2" value="<%=mem_id2%>">
 					
-					<input type="submit" value="<%=text%>"><br>
+					<input class="btn-default btn-xs btn-block" type="submit" value="<%=text%>"><br>
 				</form>
 				
 <% 
@@ -173,7 +173,7 @@
 					<input type="hidden" name="acd_startTime" value="<%=acd_startTime %>">
 					<input type="hidden" name="mem_id2" value="<%=mem_id2%>">
 					
-					<input type="submit" value="<%=text%>"><br>
+					<input class="btn-default btn-xs btn-block" type="submit" value="<%=text%>"><br>
 				</form>
 				
 <% 

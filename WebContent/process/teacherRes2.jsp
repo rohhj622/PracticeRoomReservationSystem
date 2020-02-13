@@ -26,6 +26,7 @@
 	*/
 	
 	String mem_id = session.getAttribute("mem_id").toString();
+	System.out.println(mem_id);
 	String year = request.getParameter("y");
 	String  month = request.getParameter("m");
 	String instrument=null;
@@ -78,6 +79,7 @@
 		
 		if(instrument.equals("drum")){
 			chkID=1;
+			System.out.println("과연: "+chkID);
 		}
 		if(instrument.equals("bass")||instrument.equals("guitar")){
 			instrument="guitar&bass";
@@ -101,7 +103,9 @@
 			String  sql = "SELECT mem_name,acd_startTime,acd_endTime,mem_instrument,acd_no,mem_id"+
 							" FROM SkyMusic.reservation natural join SkyMusic.member natural join SkyMusic.academy "+
 							"where res_date ='"+date+"' and SkyMusic.reservation.acd_no like 'D_b%' order by acd_startTime,mem_name";
-
+			
+			pstmt = conn.prepareStatement(sql);
+			rs = pstmt.executeQuery(sql);
 			/* 예약 내역이 없이비어있다면  */
 			if(rs.next()==false){
 	%>
@@ -125,7 +129,7 @@
 						<input type="hidden" name="mem_id2" value="<%=mem_id2%>">
 						<input type="hidden" name="teacherI" value="<%=instrument%>">
 						
-						<input type="submit" value="<%=text%>"><br>
+						<input class="btn-default btn-xs btn-block" type="submit" value="<%=text%>"><br>
 					</form>
 					
 	<% 
@@ -171,7 +175,7 @@
 						<input type="hidden" name="mem_id2" value="<%=mem_id2%>">
 						<input type="hidden" name="teacherI" value="<%=instrument%>">
 						
-						<input type="submit" value="<%=text%>"><br>
+						<input class="btn-default btn-xs btn-block" type="submit" value="<%=text%>"><br>
 					</form>
 					
 	<% 
@@ -217,7 +221,7 @@
 						<input type="hidden" name="mem_id2" value="<%=mem_id2%>">
 						<input type="hidden" name="teacherI" value="<%=instrument%>">
 						
-						<input type="submit" value="<%=text%>"><br>
+						<input class="btn-default btn-xs btn-block" type="submit" value="<%=text%>"><br>
 					</form>
 					
 	<% 
