@@ -1,6 +1,6 @@
 # PracticeRoomReservationSystem
 
-> 연습실 예약과 관리를 위한 웹 사이트입니다.
+> 연습실 예약과 관리를 위한 웹 사이트입니다. (localhost:8080/login.jsp)
 #eclipse #jsp  #mysql8.0.17 #apacheTomcat9.0.24 
 
 
